@@ -1,8 +1,18 @@
-import React, {useState} from "react";
+import React from "react";
 import "../styles/navBar.css";
 import {AiOutlineMenu} from "react-icons/ai";
 import {IoLogoPlaystation} from "react-icons/io";
 import {CgClose} from "react-icons/cg";
+
+const NavItem = ({url, pageName}) => {
+    return (
+        <li>
+            <a href={url}>
+                {pageName}
+            </a>
+        </li>
+    )
+}
 
 export const NavBar = () => {
     return (
@@ -13,26 +23,10 @@ export const NavBar = () => {
                 <CgClose style={{color: '#fff'}} className="close img-toggle"/>
             </label>
             <ul className="menu">
-                <li>
-                    <a href="/">
-                        <IoLogoPlaystation className="logo"/>
-                    </a>
-                </li>
-                <li>
-                    <a href="/">
-                        home
-                    </a>
-                </li>
-                <li>
-                    <a href="/about">
-                        About
-                    </a>
-                </li>
-                <li>
-                    <a href="/contact">
-                        Contact
-                    </a>
-                </li>
+                <NavItem url={"/"} pageName={<IoLogoPlaystation className="logo"/>}/>
+                <NavItem url={"/"} pageName={"Home"}/>
+                <NavItem url={"/about"} pageName={"About"}/>
+                <NavItem url={"/contact"} pageName={"Contact"}/>
             </ul>
         </nav>
     );
