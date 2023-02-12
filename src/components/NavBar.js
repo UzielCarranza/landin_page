@@ -3,6 +3,7 @@ import "../styles/navBar.css";
 import {AiOutlineMenu} from "react-icons/ai";
 import {GrClose} from "react-icons/gr";
 import {IoLogoPlaystation} from "react-icons/io";
+import {Link} from 'react-router-dom';
 
 export const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -23,8 +24,18 @@ export const NavBar = () => {
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <IoLogoPlaystation/>
+                    <a href="/">
+                        home
+                    </a>
+                </li>
+                <li>
+                    <a href="/about">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="/contact">
+                        Contact
                     </a>
                 </li>
             </ul>
