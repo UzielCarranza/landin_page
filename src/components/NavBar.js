@@ -5,10 +5,6 @@ import {IoLogoPlaystation} from "react-icons/io";
 import {CgClose} from "react-icons/cg";
 
 export const NavBar = () => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggle = () => setIsOpen(!isOpen);
-
     return (
         <nav className="nav">
             <input type="checkbox" id="nav-checkbox" className="nav-checkbox"/>
