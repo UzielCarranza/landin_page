@@ -1,11 +1,13 @@
 .nav{
     background-color: #333;
     padding-inline: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .toggle{
     position: absolute;
-    top: 0.7rem;
+    top: 1.2rem;
     right: 1rem;
     cursor: pointer;
 }
@@ -44,7 +46,7 @@
 }
 
 .menu a{
-    color: inherit;
+    color: #fff;
     font-size: 1.2rem;
     text-decoration: none;
 }
@@ -67,7 +69,12 @@
     display: none;
 }
 
-@media  (min-width: 380px) {
+.img-toggle{
+    font-size: 2em;
+    color: #fff;
+}
+
+@media screen and (min-width: 768px) {
     .toggle{
         display: none;
     }
@@ -76,8 +83,9 @@
         flex-direction: row;
     }
 
-    .manu li{
+    .menu li{
         display: block;
     }
+
 
 }
