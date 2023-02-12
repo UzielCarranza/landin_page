@@ -8,7 +8,7 @@ With its cutting-edge technology and intuitive design, it demonstrates my abilit
 
 So if you are looking for a talented software developer who is passionate about staying up-to-date with the latest industry trends, look no further. I am here to bring my skills, knowledge, and enthusiasm to your next project.
 
-Thank you for visiting my React.js Landing Page. I look forward to the opportunity to work with you!"
+Thank you for visiting my React.js Landing Page!"
 
 
 
