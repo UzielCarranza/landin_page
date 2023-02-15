@@ -16,30 +16,29 @@ export const Contact = () => {
     }
     return (
         <div className="form-container">
-            <h2 className="mb-3">React Contact Form Component Example</h2>
+            <h2 className="title">Contact Us</h2>
             <form onSubmit={onSubmit}>
-                <div className="input-wrapper">
-                    <label className="form-label" htmlFor="name">
-                        Name
-                    </label>
-                    <input className="form-control" type="text" id="name" required/>
-                </div>
-                <div className="input-wrapper">
-                    <label className="form-label" htmlFor="email">
-                        Email
-                    </label>
-                    <input className="form-control" type="email" id="email" required/>
-                </div>
-                <div className="input-wrapper ">
-                    <label className="form-label" htmlFor="message">
-                        Message
-                    </label>
-                    <textarea className="form-control" id="message" required/>
-                </div>
+                {formInput("text", "name", "name")}
+                {formInput("email", "email", "email")}
+                {formInput("message", "message", "type your message...")}
                 <button className="form-btn" type="submit">
                     {formStatus}
                 </button>
             </form>
+        </div>
+    )
+}
+
+const formInput = (type, id, placeholder) => {
+    return (
+        <div className="input-wrapper">
+            {
+                type === "message" ?
+
+                <input id={id} type={type} className="message" placeholder={placeholder} required/>
+                :
+                <input id={id} type={type} className="form-control" placeholder={placeholder} required/>
+            }
         </div>
     )
 }
