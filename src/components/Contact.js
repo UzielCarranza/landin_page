@@ -15,16 +15,19 @@ export const Contact = () => {
         console.log(conFom)
     }
     return (
-        <div className="form-container">
+        <div className="form-container wrapper">
             <h2 className="title">Contact Us</h2>
-            <form onSubmit={onSubmit}>
+            <form className="form" onSubmit={onSubmit}>
                 {formInput("text", "name", "name")}
                 {formInput("email", "email", "email")}
                 {formInput("message", "message", "type your message...")}
-                <button className="form-btn" type="submit">
-                    {formStatus}
-                </button>
+                <div className="input-wrapper">
+                    <button type="submit" className="form-btn">
+                        {formStatus}
+                    </button>
+                </div>
             </form>
+
         </div>
     )
 }
@@ -35,9 +38,9 @@ const formInput = (type, id, placeholder) => {
             {
                 type === "message" ?
 
-                <input id={id} type={type} className="message" placeholder={placeholder} required/>
-                :
-                <input id={id} type={type} className="form-control" placeholder={placeholder} required/>
+                    <input id={id} type={type} className="message" placeholder={placeholder} required/>
+                    :
+                    <input id={id} type={type} className="form-control" placeholder={placeholder} required/>
             }
         </div>
     )
