@@ -7,7 +7,7 @@
 
 .toggle{
     position: absolute;
-    top: 1.2rem;
+    top: 0.5rem;
     right: 1rem;
     cursor: pointer;
 }
@@ -15,6 +15,7 @@
 .toggle .menu{
     height: 2rem;
     margin-top: 0.2rem;
+    bottom: 2rem;
 }
 
 .toggle .close{
